@@ -35,8 +35,28 @@ class LoginScreen extends StatelessWidget {
                   borderRadius: BorderRadius.circular(10),
                   color: Colors.white,
                 ),
-                child: Text("Sign in"),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 8.0),
+                  child: Text("Sign in", style: TextStyle(
+                    fontSize: 16,
+                    color: Color(0xFF2B475E)
+                  ),),
+                ),
               ),
+            ),
+            SizedBox(height: 16,),
+            Row(
+              children: [
+                Text("don't have an account", style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 8
+                ),),
+                Text("Sign in", style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 10
+                ),)
+
+              ],
             )
           ],
         ),
