@@ -1,3 +1,5 @@
+import 'package:chat_app/screens/signup_screen.dart';
+import 'package:chat_app/widgets/button_widget.dart';
 import 'package:chat_app/widgets/text_field_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -23,38 +25,30 @@ class LoginScreen extends StatelessWidget {
                 fontSize: 26,
               ),
             ),
-            SizedBox(height: 20),
+            SizedBox(height: 50),
             TextFieldWidget(hintText: "Email",),
             SizedBox(height: 8,),
             TextFieldWidget(hintText: "Password",),
             SizedBox(height: 20),
-            GestureDetector(
-              child: Container(
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  color: Colors.white,
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 8.0),
-                  child: Text("Sign in", style: TextStyle(
-                    fontSize: 16,
-                    color: Color(0xFF2B475E)
-                  ),),
-                ),
-              ),
-            ),
+            
+            ButtonWidget(text: "Login",),
             SizedBox(height: 16,),
             Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text("don't have an account", style: TextStyle(
                   color: Colors.white,
-                  fontSize: 8
-                ),),
-                Text("Sign in", style: TextStyle(
-                  color: Colors.white,
                   fontSize: 10
-                ),)
+                ),),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pushNamed(context, 'SignupScreen');
+                  },
+                  child: Text(" Sign up", style: TextStyle(
+                    color: Color(0xFFD2F4FC),
+                    fontSize: 12
+                  ),),
+                )
 
               ],
             )
